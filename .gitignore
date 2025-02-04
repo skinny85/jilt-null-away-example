@@ -1,3 +1,5 @@
 /jilt-problem-sample-core/target/
 /jilt-problem-sample-server/target/
 .java-version
+*.iml
+.idea/
