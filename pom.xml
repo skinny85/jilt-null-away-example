@@ -41,8 +41,10 @@
                         <arg>-Xplugin:ErrorProne
                             -Xep:NullAway:ERROR
                             -XepOpt:NullAway:AnnotatedPackages=com.github.alexandrenavarro.jilt.problem.sample
+
 <!-- Use this way to exclude @Generated classes if the external api is correct but not the internal API because the check of potential NPE of internal API are not checked but the potential NPE of external API are checked -->
                             -XepOpt:NullAway:ExcludedClassAnnotations=javax.annotation.processing.Generated
+
 <!-- Use this way to exclude @Generated classes if the external as the internal api are not correct, no check is done on internal API as well on the external API -->
 <!--                            -XepOpt:NullAway:TreatGeneratedAsUnannotated-->
                         </arg>
@@ -121,4 +123,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

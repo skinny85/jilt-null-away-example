@@ -17,11 +17,11 @@ import org.jspecify.annotations.Nullable;
 public final class Person {
     private final String firstName;
     private final String lastName;
+
     @Nullable
     private final String middleName;
 
     public static PersonBuilders.FirstName builder() {
         return PersonBuilder.builder();
     }
-
 }
