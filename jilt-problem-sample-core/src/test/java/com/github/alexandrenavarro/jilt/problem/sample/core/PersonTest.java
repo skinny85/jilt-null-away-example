@@ -8,7 +8,8 @@ class PersonTest {
     @Test
     void test_person_builder() {
         final Person person = Person.builder()
-                .firstName(null)
+//                .firstName(null) // triggers compilation failure
+                .firstName("null")
                 .lastName("Do")
                 .middleName(null)
                 .build();

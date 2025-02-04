@@ -13,7 +13,7 @@ import org.jspecify.annotations.Nullable;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 @ToString
-@Builder(style = BuilderStyle.STAGED, factoryMethod = "builder")
+@Builder(style = BuilderStyle.STAGED, factoryMethod = "builder", toBuilder = "toBuilder")
 public final class Person {
     private final String firstName;
     private final String lastName;
