@@ -2,6 +2,9 @@ package com.github.alexandrenavarro.jilt.problem.sample.core;
 
 import org.junit.jupiter.api.Test;
 
+import java.lang.annotation.Annotation;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class PersonTest {
@@ -17,6 +20,12 @@ class PersonTest {
 
         // uncomment this to see a compilation error from NullAway
 //        System.out.println(printPerson(null));
+    }
+
+    @Test
+    void check_person_builder_annotations() {
+        Annotation[] annotations = PersonBuilder.class.getAnnotations();
+        assertEquals(0, annotations.length);
     }
 
     private static String printPerson(Person person) {

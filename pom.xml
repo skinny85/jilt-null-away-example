@@ -12,7 +12,7 @@
         <maven.version>3.9.9</maven.version>
         <!-- dependencies version -->
         <jspecify.version>1.0.0</jspecify.version>
-        <jilt.version>1.6.3</jilt.version>
+        <jilt.version>1.7</jilt.version>
         <error_prone_core.version>2.36.0</error_prone_core.version>
         <nullaway.version>0.12.3</nullaway.version>
         <lombok.version>1.18.36</lombok.version>
@@ -81,9 +81,9 @@
 <!--                    <includes>-->
 <!--                        <include>com/github/alexandrenavarro/jilt/problem/sample/core/ManualBuilder.class</include>-->
 <!--                    </includes>-->
-                    <excludes>
-                        <exclude>com/github/alexandrenavarro/jilt/problem/sample/**/*Builder.class</exclude>
-                    </excludes>
+<!--                    <excludes>-->
+<!--                        <exclude>com/github/alexandrenavarro/jilt/problem/sample/**/*Builder.class</exclude>-->
+<!--                    </excludes>-->
                 </configuration>
                 <executions>
                     <execution>

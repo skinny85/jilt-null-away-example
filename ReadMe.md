@@ -4,4 +4,4 @@ Requires Java 21+.
 
 To run from the command line:
 
-    $ ./mvnw verify
+    $ ./mvnw clean verify
