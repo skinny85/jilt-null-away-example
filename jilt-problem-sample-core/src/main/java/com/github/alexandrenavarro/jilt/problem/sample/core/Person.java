@@ -1,27 +1,25 @@
 package com.github.alexandrenavarro.jilt.problem.sample.core;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Builder.Default;
+import lombok.Data;
+import lombok.NonNull;
 import org.jilt.Builder;
 import org.jilt.BuilderStyle;
 import org.jspecify.annotations.Nullable;
 
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
-@Getter
-@EqualsAndHashCode(callSuper = false)
-@ToString
-@Builder(style = BuilderStyle.STAGED, factoryMethod = "builder", toBuilder = "toBuilder")
+@Data
+@lombok.Builder(access = AccessLevel.PRIVATE)
+@Builder(style = BuilderStyle.FUNCTIONAL, toBuilder = "toBuilder")
 public final class Person {
-    private final String firstName;
-    private final String lastName;
+    @NonNull private final String firstName;
+    @NonNull private final String lastName;
 
     @Nullable
-    private final String middleName;
+    @Default
+    private final String middleName = null;
 
     public static PersonBuilders.FirstName builder() {
-        return PersonBuilder.builder();
+        throw new RuntimeException();
     }
 }

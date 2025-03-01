@@ -4,18 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import java.lang.annotation.Annotation;
 
+import static com.github.alexandrenavarro.jilt.problem.sample.core.PersonBuilder.Optional.middleName;
+import static com.github.alexandrenavarro.jilt.problem.sample.core.PersonBuilder.firstName;
+import static com.github.alexandrenavarro.jilt.problem.sample.core.PersonBuilder.lastName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class PersonTest {
     @Test
     void test_person_builder() {
-        final Person person = Person.builder()
-//                .firstName(null) // triggers compilation failure
-                .firstName("null")
-                .lastName("Do")
-                .middleName(null)
-                .build();
+        Person person = PersonBuilder.person(
+//                firstName(null), // triggers compilation failure and IDE warning
+                firstName("null"),
+                lastName("Do"),
+                middleName(null)
+        );
         assertNotNull(person);
 
         // uncomment this to see a compilation error from NullAway
